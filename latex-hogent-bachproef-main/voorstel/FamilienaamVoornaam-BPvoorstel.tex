@@ -9,6 +9,7 @@
 \documentclass{hogent-article}
 
 % Invoegen bibliografiebestand
+\usepackage{biblatex} 
 \addbibresource{voorstel.bib}
 
 % Informatie over de opleiding, het vak en soort opdracht
@@ -20,14 +21,14 @@
 % \course{Bachelor thesis}
 % \assignmenttype{Research proposal}
 
-\academicyear{2022-2023} % TODO: pas het academiejaar aan
+\academicyear{2023-2024} % TODO: pas het academiejaar aan
 
 % TODO: Werktitel
-\title{Vul hier de voorgestelde titel van je onderzoek in}
+\title{Implementatie van Kunstmatige Intelligentie voor Verbeterde Toeristische Ervaringen bij Historische en Culturele Bezienswaardigheden: Een Proof of Concept Ontwikkeling}
 
 % TODO: Studentnaam en emailadres invullen
-\author{Ernst Aarden}
-\email{ernst.aarden@student.hogent.be}
+\author{Kadir Akkurt}
+\email{kadir.akkurt@student.hogent.be}
 
 % TODO: Medestudent
 % Gaat het om een bachelorproef in samenwerking met een student in een andere
@@ -36,7 +37,7 @@
 % \email{yasmine.alaoui@student.hogent.be}
 
 % TODO: Geef de co-promotor op
-\supervisor[Co-promotor]{S. Beekman (Synalco, \href{mailto:sigrid.beekman@synalco.be}{sigrid.beekman@synalco.be})}
+\supervisor[Co-promotor]{Franz Iacob (Cegeka, \href{mailto:Franz.Iacob@cegeka.com}{Franz.Iacob@cegeka.com})}
 
 % Binnen welke specialisatierichting uit 3TI situeert dit onderzoek zich?
 % Kies uit deze lijst:
@@ -50,12 +51,13 @@
 %   zelf
 %
 \specialisation{Mobile \& Enterprise development}
-\keywords{Scheme, World Wide Web, $\lambda$-calculus}
+\keywords{Software, AI,Object recognition}
 
 \begin{document}
 
 \begin{abstract}
-  Hier schrijf je de samenvatting van je voorstel, als een doorlopende tekst van één paragraaf. Let op: dit is geen inleiding, maar een samenvattende tekst van heel je voorstel met inleiding (voorstelling, kaderen thema), probleemstelling en centrale onderzoeksvraag, onderzoeksdoelstelling (wat zie je als het concrete resultaat van je bachelorproef?), voorgestelde methodologie, verwachte resultaten en meerwaarde van dit onderzoek (wat heeft de doelgroep aan het resultaat?).
+  
+  Dit thesis onderneemt het onderzoek naar het gebruik van kunstmatige intelligentie (AI) in de toeristische ervaring om de historische, culturele en andere historische locaties te verbeteren en een proof of concept te ontwikkelen. Dit identificeert specifieke behoeften en uitdagingen waarmee bezoekers op dergelijke locaties worden geconfronteerd. Aandachtsgebieden zijn navigatie, gebieden die worden gebruikt voor het verstrekken van informatie, taalbarrières en personalisatie van de ervaring. Dit werk toont duidelijk de manier waarop AI-tools en -toepassingen, zoals interactieve gidsen en augmented reality-ervaringen, gebruikt kunnen worden om aan deze uitdaging te voldoen en de bezoekerservaring te verrijken. Dit methodologische voorstel begint met de ontwikkeling en het testen van dergelijke AI-toepassingen in een echte omgeving, waarna de beoordeling van het effect volgt met betrekking tot gebruikersfeedback en data-analyse. Het verwachte effect is dat toeristen kunnen profiteren van een nog betere ervaring die hen toegevoegde waarde biedt op educatieve en persoonlijk zinvolle wijze. De toegevoegde waarde van dit paper is dat het nieuwe mogelijkheden opent voor het openstellen van culturele en historische locaties voor een groter aantal mensen, doordat het AI implementeert, iets nieuws dat in een dimensie wordt gebracht waarbij de bezoekers toegang hebben en omgaan met deze locatie.
 \end{abstract}
 
 \tableofcontents
@@ -64,6 +66,6 @@
 % kan opgenomen worden in de bijlagen van de bachelorproef zelf.
 \input{voorstel-inhoud}
 
+\setlength\bibitemsep{2pt} %% Add Some space between the bibliograpy entries
 \printbibliography[heading=bibintoc]
-
 \end{document}

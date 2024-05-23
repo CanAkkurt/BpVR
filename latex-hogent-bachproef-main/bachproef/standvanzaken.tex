@@ -1,13 +1,6 @@
 \chapter{\IfLanguageName{dutch}{Stand van zaken}{State of the art}}%
 \label{ch:stand-van-zaken}
 
-% Tip: Begin elk hoofdstuk met een paragraaf inleiding die beschrijft hoe
-% dit hoofdstuk past binnen het geheel van de bachelorproef. Geef in het
-% bijzonder aan wat de link is met het vorige en volgende hoofdstuk.
-
-% Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
-
-\section{Inleiding}
 
 Dit hoofdstuk biedt een overzicht van de huidige stand van zaken op het gebied van kunstmatige intelligentie (AI), met een specifieke focus op objectherkenningstechnologieën en hun toepassingen in verschillende sectoren, waaronder de recreatiesector. AI speelt een steeds grotere rol in het verbeteren van operationele efficiëntie en gebruikerservaringen. In het bijzonder worden de diverse API's voor objectherkenning besproken, met als doel de meest geschikte API te identificeren voor integratie in de Proof of Concept (PoC).
 
@@ -16,7 +9,7 @@ Dit hoofdstuk biedt een overzicht van de huidige stand van zaken op het gebied v
 \section{AI}
 \subsection{Definitie}
 
-De artikelen van Britannica en McKinsey bieden een grondig overzicht van kunstmatige intelligentie (AI) en de diverse toepassingen ervan in verschillende sectoren. De evolutie van AI wordt benadrukt door zijn vermogen om menselijke intelligentieprocessen te simuleren, waardoor vooruitgang mogelijk is in uiteenlopende gebieden, variërend van gezondheidszorg tot financiën en verder \autocite{mckinseyAI}\autocite{britannicaAI}.
+De artikelen van Britannica en McKinsey bieden een grondig overzicht van kunstmatige intelligentie (AI) en de diverse toepassingen ervan in verschillende sectoren. De evolutie van AI wordt benadrukt door zijn vermogen om menselijke intelligentieprocessen te simuleren, waardoor vooruitgang mogelijk is in uiteenlopende gebieden, variërend van gezondheidszorg tot financiën en verder \autocite{mckinseyAI}.
 
 AI wordt breed ingedeeld in vier typen op basis van functionaliteit en complexiteit: reactieve machines, machines met beperkt geheugen, theorie van de geest en zelfbewuste machines. De eenvoudigste, reactieve machines, werken zonder enige voorkennis en reageren alleen op huidige input. Machines met beperkt geheugen kunnen gebruikmaken van eerdere ervaringen om beslissingen te nemen, een cruciale functie voor toepassingen zoals zelfrijdende auto's. De meer geavanceerde en hypothetische categorieën, theorie van de geest en zelfbewuste machines, zouden machines inhouden die emoties en gedachten van anderen begrijpen en zelfbewustzijn bezitten, wat respectievelijk aanzienlijke sprongen naar echte AI vertegenwoordigt \autocite{courseraAI}.
 
@@ -24,13 +17,15 @@ De toepassing van AI in predictief onderhoud en logistieke optimalisatie illustr
 
 Generatieve AI, een ander opkomend vakgebied, staat op het punt om de creatie van inhoud over verschillende domeinen te revolutioneren, waarbij het helpt bij taken zoals het genereren van marketingteksten, de analyse van juridische documenten en zelfs het beoordelen van softwarecode. Hoewel het potentieel van AI enorm is, gaat het ook gepaard met ethische overwegingen, waarbij zorgvuldige overweging van inzet en implicaties noodzakelijk is \autocite{mckinseyAI}.
 \subsection{Object recognition}
-Kunstmatige intelligentie (AI) en objectherkenningstechnologieën hebben aanzienlijk hun aanwezigheid gemarkeerd in verschillende domeinen, waaronder de recreatiesector. Op diep leren gebaseerde objectdetectiemodellen zijn nu integraal in staat om verschillende elementen binnen afbeeldingen of video's te onderscheiden en te labelen, wat een cruciale rol speelt bij het verbeteren van de gebruikerservaring in recreatieve locaties en activiteiten.
+Kunstmatige intelligentie (AI) en objectherkenningstechnologieën hebben aanzienlijk hun aanwezigheid gemarkeerd in verschillende domeinen, waaronder de recreatiesector. Op diep leren gebaseerde objectdetectiemodellen zijn nu integraal in staat om verschillende elementen binnen afbeeldingen of video's te onderscheiden en te labelen, wat een belangrijke rol speelt bij het verbeteren van de gebruikerservaring in recreatieve locaties en activiteiten.
 
 Deze AI-modellen bevatten een encoder om afbeeldingen te analyseren en kenmerken te identificeren, en een decoder om de locaties en labels van gedetecteerde objecten vast te stellen. Voorbij de basismodellen die regressie gebruiken voor directe locatievoorspellingen, verfijnen meer geavanceerde frameworks zoals region proposal networks en single-shot detectors (SSD's) de nauwkeurigheid door waarschijnlijke objectgebieden aan te wijzen en deze voorspellingen te verfijnen via ingewikkelde netwerklagen.
 
 Binnen de recreatie-industrie bieden deze technologieën nieuwe toepassingen, zoals het verbeteren van veiligheid met surveillancetechnieken, het helpen bij crowdmanagement, of het stimuleren van betrokkenheid door interactieve digitale ervaringen mogelijk te maken, met behulp van augmented reality of mobiele apps.
 
 Het aanpassen van AI voor edge-implementatie - optimalisatie voor gebruik in mobiele of IoT-apparaten binnen recreatieve contexten - vereist strategieën om efficiëntie te behouden onder beperkte middelen. Benaderingen zoals netwerkpruning en kwantisatie worden essentieel, om ervoor te zorgen dat de modelprestaties robuust blijven zonder de gebruikerservaring te verslechteren.
+
+
 
 \subsection{Gebruik in de recreatie sector}
 
@@ -75,7 +70,7 @@ Kenmerken van mobiele applicaties:
 \end{itemize}
 
 \subsection{Webzoekmachines en Online Encyclopedieën}
-Webzoekmachines zoals Google en online encyclopedieën zoals Wikipedia zijn nog steeds een van de meest gebruikte bronnen voor het verkrijgen van informatie over culturele en historische bezienswaardigheden. Gebruikers kunnen snel zoeken naar specifieke locaties en objecten en toegang krijgen tot uitgebreide artikelen, afbeeldingen en verwijzingen naar aanvullende bronnen. Deze platforms worden continu bijgewerkt en bieden vaak een breed scala aan informatie uit diverse perspectieven.
+Webzoekmachines zoals Google en online encyclopedieën zoals Wikipedia zijn een van de meest gebruikte bronnen voor het verkrijgen van informatie over culturele en historische bezienswaardigheden. Gebruikers kunnen snel zoeken naar specifieke locaties en objecten en toegang krijgen tot uitgebreide artikelen, afbeeldingen en verwijzingen naar aanvullende bronnen. Deze platforms worden continu bijgewerkt en bieden vaak een breed scala aan informatie uit diverse perspectieven.
 
 Voordelen van webzoekmachines en online encyclopedieën:
 \begin{itemize}
@@ -134,6 +129,69 @@ OpenCV AI Kit (OAK) is een open-source hardware- en softwareplatform voor AI-ges
 
 \subsubsection{Alibaba Cloud Vision API}
 Alibaba Cloud Vision API biedt uitgebreide beeldanalysefuncties, waaronder objectherkenning, gezichtsherkenning, en tekstanalyse. Deze API wordt ondersteund door krachtige AI-modellen en wordt gebruikt in diverse toepassingen, zoals e-commerce, beveiliging en smart cities. Alibaba Cloud Vision API is bekend om zijn schaalbaarheid en betrouwbaarheid\autocite{alibaba}.
+
+\section{Webdetectie}
+Webdetectie is een belangrijk onderdeel van beeldherkenningstechnologieën waarbij AI-modellen worden gebruikt om referenties naar specifieke afbeeldingen of objecten op het internet te vinden. Dit proces maakt gebruik van geavanceerde algoritmen om visuele kenmerken te analyseren en te matchen met een uitgebreide database van online beelden en bronnen. Een voorbeeld van een krachtige webdetectie-API is de Google Cloud Vision API.
+
+De Google Cloud Vision API biedt uitgebreide mogelijkheden voor beeldanalyse, waaronder webdetectie. Deze functie kan objecten, teksten en andere visuele kenmerken in afbeeldingen identificeren en koppelen aan relevante online bronnen. Hierdoor kunnen gebruikers niet alleen de aard van de objecten begrijpen, maar ook contextuele informatie verkrijgen door het vinden van gerelateerde webpagina's en afbeeldingen.
+
+\subsection{Hoe werkt Webdetectie?}
+Webdetectie werkt door gebruik te maken van machine learning-modellen die zijn getraind op enorme hoeveelheden beelddata. Deze modellen analyseren de ingevoerde afbeelding, extraheren visuele kenmerken en zoeken vervolgens naar overeenkomsten in een grote online database. Het proces kan worden onderverdeeld in verschillende stappen:
+
+\paragraph{1. Voorverwerking van de Afbeelding:}
+Voordat een afbeelding kan worden geanalyseerd, wordt deze vaak voorverwerkt om de kwaliteit te optimaliseren. Dit kan inhouden dat de afbeelding wordt bijgesneden, de resolutie wordt aangepast, of ruis wordt verminderd. Deze stappen helpen om de nauwkeurigheid van de herkenning te verbeteren.
+
+\paragraph{2. Kenmerkextractie:}
+Tijdens de kenmerkextractie identificeert het model specifieke visuele kenmerken van de afbeelding, zoals kleuren, vormen, texturen en randen. Deze kenmerken worden omgezet in numerieke representaties die door het model kunnen worden geanalyseerd.
+
+\paragraph{3. Matching en Vergelijking:}
+De geëxtraheerde kenmerken worden vervolgens vergeleken met een uitgebreide database van beelden en visuele data. Het model zoekt naar overeenkomsten tussen de kenmerken van de ingevoerde afbeelding en de kenmerken in de database. Dit gebeurt door het berekenen van de gelijkenis tussen de numerieke representaties.
+
+\paragraph{4. Identificatie van Webentiteiten:}
+Wanneer overeenkomsten worden gevonden, identificeert het model de bijbehorende webentiteiten. Dit zijn vaak labels of beschrijvingen die aangeven wat er in de afbeelding is te zien. De webentiteiten worden gerangschikt op basis van hun relevantie en waarschijnlijkheid.
+
+\paragraph{5. Genereren van Zoekresultaten:}
+Op basis van de geïdentificeerde webentiteiten genereert de webdetectie-API een lijst van relevante zoekresultaten. Deze resultaten kunnen links bevatten naar webpagina's die de afbeelding of soortgelijke afbeeldingen bevatten. Dit stelt gebruikers in staat om meer contextuele informatie te vinden en verder onderzoek te doen naar het onderwerp van de afbeelding.
+
+\subsection{Toepassingen van Webdetectie}
+Webdetectie biedt tal van praktische toepassingen in verschillende domeinen:
+
+\paragraph{Productherkenning:}
+Webdetectie kan worden gebruikt om producten in afbeeldingen te identificeren en gebruikers door te verwijzen naar online winkels waar deze producten beschikbaar zijn. Dit is nuttig voor e-commerce platforms die visuele zoekfuncties willen integreren.
+
+\paragraph{Auteursrechtbeheer:}
+Door webdetectie kunnen auteursrechthouders controleren waar hun afbeeldingen online worden gebruikt. Dit helpt bij het opsporen van ongeautoriseerd gebruik en het beschermen van intellectuele eigendommen.
+
+\paragraph{Culturele en Historische Onderzoek:}
+In het kader van cultureel erfgoed kunnen onderzoekers afbeeldingen analyseren en relevante historische informatie vinden door vergelijkbare beelden online te identificeren. Dit vergemakkelijkt het verzamelen van informatie over kunstwerken, monumenten en historische locaties.
+
+\paragraph{Content Moderatie:}
+Webdetectie helpt bij het modereren van inhoud op online platforms door afbeeldingen te scannen op ongepaste of schadelijke inhoud. Door vergelijkbare beelden te identificeren, kunnen platforms sneller reageren op schendingen van hun beleid.
+
+De Google Cloud Vision API is een voorbeeld van hoe webdetectie effectief kan worden ingezet om deze toepassingen te ondersteunen \autocite{googleVisionAPI}.
+
+
+\section{ANOVA}
+ANOVA, wat staat voor \textit{Analysis of Variance}, is een statistische methode die wordt gebruikt om de verschillen tussen de gemiddelden van drie of meer groepen te analyseren. Deze methode werd geïntroduceerd door Ronald A. Fisher in de jaren 1920 en is sindsdien een fundamenteel onderdeel van statistische analyses in vele onderzoeksgebieden.
+
+ANOVA helpt bij het bepalen of er statistisch significante verschillen bestaan tussen de gemiddelden van drie of meer onafhankelijke groepen. Het hoofddoel van ANOVA is om te testen of de waargenomen verschillen in gemiddelden groter zijn dan wat door toeval zou worden verwacht.
+
+ANOVA vergelijkt de variabiliteit tussen de groepen met de variabiliteit binnen de groepen. Deze vergelijking wordt uitgevoerd door de totale variantie van de data te splitsen in twee componenten:
+\begin{itemize}
+    \item \textbf{Tussen-groepen variabiliteit:} Variabiliteit veroorzaakt door het effect van de verschillende groepen.
+    \item \textbf{Binnen-groepen variabiliteit:} Variabiliteit veroorzaakt door verschillen binnen dezelfde groep.
+\end{itemize}
+
+De basisprincipes van ANOVA kunnen als volgt worden samengevat:
+\begin{enumerate}
+    \item \textbf{Null Hypothese (H0):} Alle groepsgemiddelden zijn gelijk.
+    \item \textbf{Alternatieve Hypothese (H1):} Ten minste één groepsgemiddelde is verschillend.
+\end{enumerate}
+
+De ANOVA-test geeft een F-statistiek, die de ratio is van de tussen-groepen variabiliteit tot de binnen-groepen variabiliteit. Een hoge F-waarde suggereert dat de variabiliteit tussen de groepen groot is ten opzichte van de variabiliteit binnen de groepen, wat kan wijzen op significante verschillen tussen de groepen.
+
+Een uitgebreid overzicht van ANOVA en de bijbehorende technieken is te vinden in het boek \textit{Introduction to the Practice of Statistics} door David S. Moore, George P. McCabe, en Bruce A. Craig \autocite{moore2012introduction}.
+
 
 
 

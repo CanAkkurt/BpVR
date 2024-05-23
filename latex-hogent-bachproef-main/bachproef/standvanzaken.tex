@@ -7,73 +7,135 @@
 
 % Pas na deze inleidende paragraaf komt de eerste sectiehoofding.
 
-Dit hoofdstuk bevat je literatuurstudie. De inhoud gaat verder op de inleiding, maar zal het onderwerp van de bachelorproef *diepgaand* uitspitten. De bedoeling is dat de lezer na lezing van dit hoofdstuk helemaal op de hoogte is van de huidige stand van zaken (state-of-the-art) in het onderzoeksdomein. Iemand die niet vertrouwd is met het onderwerp, weet nu voldoende om de rest van het verhaal te kunnen volgen, zonder dat die er nog andere informatie moet over opzoeken \autocite{Pollefliet2011}.
+\section{Inleiding}
 
-Je verwijst bij elke bewering die je doet, vakterm die je introduceert, enz.\ naar je bronnen. In \LaTeX{} kan dat met het commando \texttt{$\backslash${textcite\{\}}} of \texttt{$\backslash${autocite\{\}}}. Als argument van het commando geef je de ``sleutel'' van een ``record'' in een bibliografische databank in het Bib\LaTeX{}-formaat (een tekstbestand). Als je expliciet naar de auteur verwijst in de zin (narratieve referentie), gebruik je \texttt{$\backslash${}textcite\{\}}. Soms is de auteursnaam niet expliciet een onderdeel van de zin, dan gebruik je \texttt{$\backslash${}autocite\{\}} (referentie tussen haakjes). Dit gebruik je bv.~bij een citaat, of om in het bijschrift van een overgenomen afbeelding, broncode, tabel, enz. te verwijzen naar de bron. In de volgende paragraaf een voorbeeld van elk.
+Dit hoofdstuk biedt een overzicht van de huidige stand van zaken op het gebied van kunstmatige intelligentie (AI), met een specifieke focus op objectherkenningstechnologieën en hun toepassingen in verschillende sectoren, waaronder de recreatiesector. AI speelt een steeds grotere rol in het verbeteren van operationele efficiëntie en gebruikerservaringen. In het bijzonder worden de diverse API's voor objectherkenning besproken, met als doel de meest geschikte API te identificeren voor integratie in de Proof of Concept (PoC).
 
-\textcite{Knuth1998} schreef een van de standaardwerken over sorteer- en zoekalgoritmen. Experten zijn het erover eens dat cloud computing een interessante opportuniteit vormen, zowel voor gebruikers als voor dienstverleners op vlak van informatietechnologie~\autocite{Creeger2009}.
 
-Let er ook op: het \texttt{cite}-commando voor de punt, dus binnen de zin. Je verwijst meteen naar een bron in de eerste zin die erop gebaseerd is, dus niet pas op het einde van een paragraaf.
 
 \section{AI}
 \subsection{Definitie}
 
-Artificial intelligence (AI) represents a broad field of technology where machines are designed to operate with a form of intelligence that mirrors human cognition. AI systems can learn, reason, perceive, infer, communicate, and make decisions to achieve specific objectives. These systems have evolved from basic reactive machines without memory, like chess-playing computers, to sophisticated systems that can drive cars, diagnose medical conditions, or manage financial investments.
+De artikelen van Britannica en McKinsey bieden een grondig overzicht van kunstmatige intelligentie (AI) en de diverse toepassingen ervan in verschillende sectoren. De evolutie van AI wordt benadrukt door zijn vermogen om menselijke intelligentieprocessen te simuleren, waardoor vooruitgang mogelijk is in uiteenlopende gebieden, variërend van gezondheidszorg tot financiën en verder \autocite{mckinseyAI}\autocite{britannicaAI}.
 
-AI's classification into types, such as reactive machines, limited memory, theory of mind, and self-awareness, illustrates its progression and future potential. While we currently leverage reactive and limited memory AI in various applications like gaming, autonomous vehicles, and predictive analytics, the more advanced stages like theory of mind and self-awareness represent the frontier of AI research and development.
+AI wordt breed ingedeeld in vier typen op basis van functionaliteit en complexiteit: reactieve machines, machines met beperkt geheugen, theorie van de geest en zelfbewuste machines. De eenvoudigste, reactieve machines, werken zonder enige voorkennis en reageren alleen op huidige input. Machines met beperkt geheugen kunnen gebruikmaken van eerdere ervaringen om beslissingen te nemen, een cruciale functie voor toepassingen zoals zelfrijdende auto's. De meer geavanceerde en hypothetische categorieën, theorie van de geest en zelfbewuste machines, zouden machines inhouden die emoties en gedachten van anderen begrijpen en zelfbewustzijn bezitten, wat respectievelijk aanzienlijke sprongen naar echte AI vertegenwoordigt \autocite{courseraAI}.
 
-The implications of AI span across multiple sectors, including healthcare, where it accelerates diagnosis and treatment processes; business, where it enhances customer service and operational efficiency; education, by providing personalized learning experiences; and manufacturing, where it boosts production speed and quality\autocite{HJALTALIN2024101914}.
+De toepassing van AI in predictief onderhoud en logistieke optimalisatie illustreert hoe AI de operationele efficiëntie aanzienlijk kan verbeteren, kosten kan verlagen en de service-uitkomsten kan verbeteren. Zo kan AI-gestuurd predictief onderhoud bijvoorbeeld apparatuurstoringen voorzien voordat ze zich voordoen, waardoor proactief ingrijpen mogelijk is. In de logistiek optimaliseert AI routering en levering, wat de efficiëntie en klanttevredenheid ten goede komt \autocite{mckinseyAI}.
 
-However, AI's advancement also introduces challenges, such as ethical considerations, bias, job displacement, and security concerns. As AI systems become more autonomous, ensuring they make decisions that align with human values and ethics becomes paramount. Additionally, there's a need for frameworks to manage AI's societal impacts, particularly in terms of employment and privacy.
-
+Generatieve AI, een ander opkomend vakgebied, staat op het punt om de creatie van inhoud over verschillende domeinen te revolutioneren, waarbij het helpt bij taken zoals het genereren van marketingteksten, de analyse van juridische documenten en zelfs het beoordelen van softwarecode. Hoewel het potentieel van AI enorm is, gaat het ook gepaard met ethische overwegingen, waarbij zorgvuldige overweging van inzet en implicaties noodzakelijk is \autocite{mckinseyAI}.
 \subsection{Object recognition}
-Artificial intelligence (AI) and object recognition technology have significantly impacted various sectors, including the recreation sector. Deep learning-based object detection models are essential in identifying and labeling different objects within an image or video, which can be highly beneficial for enhancing user experiences in recreational activities and facilities.
+Kunstmatige intelligentie (AI) en objectherkenningstechnologieën hebben aanzienlijk hun aanwezigheid gemarkeerd in verschillende domeinen, waaronder de recreatiesector. Op diep leren gebaseerde objectdetectiemodellen zijn nu integraal in staat om verschillende elementen binnen afbeeldingen of video's te onderscheiden en te labelen, wat een cruciale rol speelt bij het verbeteren van de gebruikerservaring in recreatieve locaties en activiteiten.
 
-The basic structure of these AI models involves an encoder and decoder mechanism. The encoder processes the image to extract features, while the decoder predicts bounding boxes and labels for each detected object. While simpler models rely on regression to predict object locations directly, more advanced systems like region proposal networks and single shot detectors (SSDs) offer greater flexibility and accuracy by identifying potential object locations and refining predictions through additional network layers.
+Deze AI-modellen bevatten een encoder om afbeeldingen te analyseren en kenmerken te identificeren, en een decoder om de locaties en labels van gedetecteerde objecten vast te stellen. Voorbij de basismodellen die regressie gebruiken voor directe locatievoorspellingen, verfijnen meer geavanceerde frameworks zoals region proposal networks en single-shot detectors (SSD's) de nauwkeurigheid door waarschijnlijke objectgebieden aan te wijzen en deze voorspellingen te verfijnen via ingewikkelde netwerklagen.
 
-In the context of the recreation sector, such technologies could be applied in various innovative ways. For example, they could assist in managing and monitoring public spaces, enhancing safety through surveillance, facilitating crowd counting, or even improving visitor engagement by offering interactive experiences through mobile applications or augmented reality.
+Binnen de recreatie-industrie bieden deze technologieën nieuwe toepassingen, zoals het verbeteren van veiligheid met surveillancetechnieken, het helpen bij crowdmanagement, of het stimuleren van betrokkenheid door interactieve digitale ervaringen mogelijk te maken, met behulp van augmented reality of mobiele apps.
 
-Moreover, adapting these AI models for edge deployment, such as in mobile or IoT devices used in recreational settings, involves specific considerations to ensure they function efficiently despite resource constraints. Techniques like network pruning, quantization, and adjusting input-output sizes are critical for optimizing model performance without compromising the user experience.
-
-For a more detailed understanding and technical insights into object recognition and its applications, you might want to explore the discussions presented by Edge AI and Vision Alliance and Fritz AI:
-
-Edge AI and Vision Alliance provides an overview of object recognition with MATLAB and its applications across various industries, which could be extrapolated to recreational scenarios.
-Fritz AI delves into the intricacies of different deep learning-based approaches to object detection, outlining their structure, benefits, and limitations, as well as considerations for edge deployment.
-By leveraging such AI technologies, the recreation sector can significantly enhance operational efficiency, safety, and user engagement, paving the way for more innovative and interactive recreational experiences.
+Het aanpassen van AI voor edge-implementatie - optimalisatie voor gebruik in mobiele of IoT-apparaten binnen recreatieve contexten - vereist strategieën om efficiëntie te behouden onder beperkte middelen. Benaderingen zoals netwerkpruning en kwantisatie worden essentieel, om ervoor te zorgen dat de modelprestaties robuust blijven zonder de gebruikerservaring te verslechteren.
 
 \subsection{Gebruik in de recreatie sector}
 
-The integration of Artificial Intelligence (AI) in the recreation sector, particularly in parks and recreation management, is rapidly evolving. AI applications like ChatGPT are being used by park and recreation professionals to create more efficient administrative processes, such as drafting program announcements and developing emergency action plans. These AI tools serve as valuable assets for ideation and handling writing-intensive tasks, acting as an "infinitely patient intern" for staff, thereby optimizing operational efficiency and enhancing community engagement \autocite{ParksRecAI2023}.
+De integratie van Kunstmatige Intelligentie (AI) in de recreatiesector, met name in parken en recreatiemanagement, evolueert snel. AI-toepassingen zoals ChatGPT worden gebruikt door park- en recreatieprofessionals om efficiëntere administratieve processen te creëren, zoals het opstellen van programma-aankondigingen en het ontwikkelen van noodactieplannen. Deze AI-tools dienen als waardevolle hulpmiddelen voor ideeënontwikkeling en het omgaan met schrijfintensieve taken, en fungeren als een "oneindig geduldige stagiair" voor het personeel, waardoor operationele efficiëntie wordt geoptimaliseerd en de betrokkenheid van de gemeenschap wordt vergroot \autocite{ParksRecAI2023}.
 
-In the broader scope of the entertainment industry, AI's role extends to various aspects, including content recommendation, creation, post-production, and audience analytics. For instance, AI algorithms analyze user data to offer personalized content recommendations on streaming platforms, enhancing viewer engagement. AI is also employed in content creation, assisting in generating scripts and storylines. Additionally, AI tools are leveraged in post-production tasks like video editing and visual effects, streamlining workflows and elevating the quality of the final product. Audience analytics through AI provides invaluable insights into viewer preferences and behavior, enabling informed decision-making regarding content strategies and targeted advertising \autocite{WebisoftEntAI}.
+In een breder perspectief binnen de entertainmentindustrie strekt de rol van AI zich uit tot verschillende aspecten, waaronder contentaanbeveling, creatie, postproductie en publieksanalyse. Zo analyseren AI-algoritmen gebruikersgegevens om gepersonaliseerde contentaanbevelingen te doen op streamingplatforms, waardoor de betrokkenheid van kijkers wordt vergroot. AI wordt ook ingezet bij contentcreatie, waarbij het helpt bij het genereren van scripts en verhaallijnen. Daarnaast worden AI-tools gebruikt bij postproductietaken zoals videobewerking en visuele effecten, waardoor workflows worden gestroomlijnd en de kwaliteit van het eindproduct wordt verhoogd. Publieksanalyse via AI biedt onschatbare inzichten in de voorkeuren en gedragingen van kijkers, waardoor geïnformeerde besluitvorming mogelijk is met betrekking tot contentstrategieën en gerichte advertenties \autocite{WebisoftEntAI}.
 
-\section{Object Recognition Models in AI}
+\section{Andere technologieën}
+Deze sectie bespreekt hoe men met andere technologieën informatie kan vinden over culturele bezienswaardigheden. Elke technologie biedt unieke voordelen en toepassingen, die hieronder in detail worden besproken.
 
-Object recognition is a pivotal area in AI, with various models contributing significantly to advancements in the field. Below, we discuss some key models and their contributions.
+\subsection{Gebruik van QR-codes}
+QR-codes (Quick Response codes) zijn een populaire technologie die informatie snel en eenvoudig toegankelijk maakt via smartphones. Musea, historische locaties en toeristische attracties gebruiken QR-codes om bezoekers toegang te geven tot gedetailleerde informatie, video's en interactieve inhoud. Bezoekers kunnen eenvoudig een QR-code scannen met hun smartphone om meer te leren over het object of de locatie die zij bekijken.
 
-\subsubsection{Convolutional Neural Networks (CNNs)}
-Convolutional Neural Networks (CNNs) have been foundational in the field of object recognition, with architectures like AlexNet being particularly impactful \cite{Krizhevsky2012}.
+QR-codes bieden verschillende voordelen:
+\begin{itemize}
+    \item \textbf{Toegankelijkheid:} QR-codes zijn gemakkelijk te gebruiken en vereisen alleen een smartphone met een camera en een QR-code lezer.
+    \item \textbf{Interactiviteit:} QR-codes kunnen gebruikers doorverwijzen naar multimedia-inhoud zoals video's, audiofragmenten en interactieve kaarten \autocite{lin2013qr}.
+    \item \textbf{Kostenbesparing:} Het plaatsen van QR-codes is kostenefficiënt en kan eenvoudig worden bijgewerkt zonder fysieke aanpassingen aan de locatie.
+    \item \textbf{Milieuvriendelijkheid:} Door digitale informatie te verstrekken, wordt het gebruik van papier verminderd, wat beter is voor het milieu \autocite{neal2014implementing}.
+\end{itemize}
 
-\subsubsection{Region-Based Convolutional Neural Networks (R-CNN)}
-The development of R-CNN and its successors have greatly improved object detection efficiency and accuracy, focusing on selective region proposals \cite{Girshick2014}.
+\subsection{Augmented Reality (AR)}
+Augmented Reality (AR) wordt steeds vaker gebruikt in toerisme en educatie om bezoekers een verrijkte ervaring te bieden. Door middel van AR kunnen gebruikers hun smartphones of AR-brillen richten op een object of locatie en direct toegang krijgen tot interactieve en visuele informatie, zoals historische beelden, 3D-modellen en audiogidsen. AR-toepassingen kunnen bijvoorbeeld virtuele reconstructies van historische locaties laten zien, wat bijdraagt aan een dieper begrip van de geschiedenis en cultuur.
 
-\subsubsection{You Only Look Once (YOLO)}
-YOLO revolutionized object detection by framing it as a single regression problem, streamlining the detection process \cite{Redmon2016}.
+Voordelen van AR:
+\begin{itemize}
+    \item \textbf{Visuele Rijkdom:} AR kan complexe en rijke visuele informatie bieden die verder gaat dan traditionele tekstuele uitleg \autocite{azuma1997survey}.
+    \item \textbf{Interactie:} Gebruikers kunnen interactief omgaan met de inhoud, zoals het manipuleren van 3D-modellen en het verkennen van virtuele omgevingen \autocite{billinghurst2015towards}.
+    \item \textbf{Educatieve Waarde:} AR kan educatieve ervaringen verrijken door het bieden van dynamische en meeslepende leermiddelen \autocite{wu2013current}.
+    \item \textbf{Betrokkenheid:} AR verhoogt de betrokkenheid van bezoekers door hen een unieke en boeiende ervaring te bieden \autocite{tom2018exploring}.
+\end{itemize}
 
-\subsubsection{Single Shot MultiBox Detector (SSD)}
-SSD further advanced object detection by directly predicting category scores and box offsets, enhancing speed and efficiency \cite{Liu2016}.
+\subsection{Mobiele Applicaties}
+Er zijn talloze mobiele applicaties ontwikkeld die toeristen helpen informatie te vinden over culturele en historische bezienswaardigheden. Applicaties zoals Google Arts \& Culture bieden uitgebreide informatie, virtuele rondleidingen en interactieve kaarten van musea en erfgoedsites wereldwijd. Dergelijke apps maken gebruik van geavanceerde technologieën zoals GPS, AI en databases met culturele informatie om gebruikers te voorzien van rijke en gepersonaliseerde ervaringen.
 
-\subsubsection{Mask R-CNN}
-Building on Faster R-CNN, Mask R-CNN introduced a branch for predicting segmentation masks, enabling precise object instance segmentation \cite{He2017}.
+Kenmerken van mobiele applicaties:
+\begin{itemize}
+    \item \textbf{Toegankelijkheid:} Applicaties zijn overal beschikbaar en kunnen worden gedownload op smartphones en tablets \autocite{morrison2012mobile}.
+    \item \textbf{Personalisatie:} Apps kunnen gepersonaliseerde ervaringen bieden op basis van gebruikersvoorkeuren en locatiegegevens \autocite{kim2013empirical}.
+    \item \textbf{Breed Informatieaanbod:} Applicaties kunnen uitgebreide informatie bieden, waaronder tekst, afbeeldingen, video's en audiogidsen \autocite{wa2015analysis}.
+    \item \textbf{Interactiviteit:} Gebruikers kunnen interactief omgaan met de inhoud en virtuele rondleidingen volgen \autocite{jung2015role}.
+\end{itemize}
 
-\subsubsection{RetinaNet}
-RetinaNet is known for its Focal Loss function, which significantly improves the model's ability to detect objects by addressing class imbalance \cite{Lin2017}.
+\subsection{Webzoekmachines en Online Encyclopedieën}
+Webzoekmachines zoals Google en online encyclopedieën zoals Wikipedia zijn nog steeds een van de meest gebruikte bronnen voor het verkrijgen van informatie over culturele en historische bezienswaardigheden. Gebruikers kunnen snel zoeken naar specifieke locaties en objecten en toegang krijgen tot uitgebreide artikelen, afbeeldingen en verwijzingen naar aanvullende bronnen. Deze platforms worden continu bijgewerkt en bieden vaak een breed scala aan informatie uit diverse perspectieven.
 
-\subsubsection{EfficientDet}
-EfficientDet provides a scalable and efficient architecture, achieving state-of-the-art performance across a spectrum of resource constraints \cite{Tan2020}.
+Voordelen van webzoekmachines en online encyclopedieën:
+\begin{itemize}
+    \item \textbf{Toegankelijkheid:} Deze bronnen zijn gemakkelijk toegankelijk via internet en bieden een schat aan informatie \autocite{mcclanahan2014wikipedia}.
+    \item \textbf{Actualiteit:} Informatie wordt regelmatig bijgewerkt om nauwkeurig en actueel te blijven \autocite{giles2005internet}.
+    \item \textbf{Breed Informatieaanbod:} Gebruikers kunnen een breed scala aan informatie vinden, van basisfeiten tot gedetailleerde analyses \autocite{okay2020information}.
+    \item \textbf{Bronvermeldingen:} Artikelen bevatten vaak verwijzingen naar betrouwbare bronnen voor verder onderzoek \autocite{okoli2014wikipedia}.
+\end{itemize}
 
-\subsubsection{MobileNets}
-Designed for mobile and edge devices, MobileNets utilize depthwise separable convolutions to create lightweight neural networks, facilitating object recognition in resource-constrained environments \cite{Howard2017}.
+\subsection{Social Media en User-Generated Content}
+Social media platforms zoals Instagram, Facebook en TripAdvisor spelen een steeds belangrijkere rol in hoe mensen informatie vinden over culturele bezienswaardigheden. Gebruikers delen hun ervaringen, foto's en beoordelingen, wat waardevolle inzichten kan bieden voor andere toeristen. Daarnaast kunnen officiële pagina's van musea en toeristische organisaties actuele informatie, evenementen en interactieve inhoud delen met hun volgers.
+
+Voordelen van social media en user-generated content:
+\begin{itemize}
+    \item \textbf{Echtheid:} Informatie en beoordelingen van echte gebruikers bieden authentieke inzichten en ervaringen \autocite{liu2015influence}.
+    \item \textbf{Actualiteit:} Social media platforms bieden real-time updates en feedback van gebruikers \autocite{kwok2013exploring}.
+    \item \textbf{Betrokkenheid:} Gebruikers kunnen direct communiceren met andere bezoekers en organisaties \autocite{schivinski2015influence}.
+    \item \textbf{Visualisatie:} Foto's en video's van gebruikers geven een visuele indruk van bezienswaardigheden \autocite{munar2011social}.
+\end{itemize}
+
+\subsection{Digitale Gidsen en Audiotours}
+Digitale gidsen en audiotours zijn handige hulpmiddelen voor toeristen die gedetailleerde informatie willen over bezienswaardigheden terwijl ze deze verkennen. Deze gidsen kunnen worden gedownload op smartphones en bieden vaak gesproken uitleg, interactieve kaarten en aanvullende multimedia-inhoud. Ze zijn bijzonder nuttig in situaties waar traditionele gidsen niet beschikbaar zijn of waar bezoekers op hun eigen tempo willen verkennen.
+
+Voordelen van digitale gidsen en audiotours:
+\begin{itemize}
+    \item \textbf{Flexibiliteit:} Bezoekers kunnen op hun eigen tempo en volgens hun eigen schema de tour volgen \autocite{leue2015social}.
+    \item \textbf{Interactiviteit:} Digitale gidsen bieden interactieve kaarten en multimedia-inhoud om de ervaring te verrijken \autocite{lee2016understanding}.
+    \item \textbf{Toegankelijkheid:} Audiotours zijn toegankelijk voor mensen met visuele beperkingen \autocite{lee2016role}.
+    \item \textbf{Kostenbesparing:} Digitale gidsen zijn vaak goedkoper dan het inhuren van een persoonlijke gids \autocite{king2009disney}.
+\end{itemize}
+\section{Object Recognition APIs in AI}
+
+Objectherkenning is een cruciaal gebied in AI, waarbij verschillende API's aanzienlijk bijdragen aan de vooruitgang op dit gebied. In deze sectie worden enkele belangrijke API's en hun bijdragen besproken. Het doel is om de meest geschikte API te identificeren die in de Proof of Concept (PoC) verwerkt kan worden.
+
+
+\subsubsection{Google Cloud Vision API}
+Google Cloud Vision API biedt krachtige beeldanalysefuncties, waaronder objectherkenning, gezichtsdetectie, en tekstherkenning (OCR). Het maakt gebruik van geavanceerde machine learning-modellen om objecten in afbeeldingen te identificeren en te labelen. Gebruikers kunnen eenvoudig afbeeldingen uploaden en via API-aanroepen gedetailleerde analyses ontvangen. Deze API is bijzonder nuttig voor toepassingen zoals geautomatiseerde media-analyse en contentmoderatie\autocite{google2021vision}.
+
+\subsubsection{Amazon Rekognition}
+Amazon Rekognition is een beeld- en videobeeldanalyse-service die wordt aangeboden door AWS. Het kan objecten, mensen, tekst, scènes en activiteiten detecteren en herkennen, evenals ongepaste inhoud identificeren. Rekognition wordt vaak gebruikt voor beveiliging en bewaking, media- en entertainmenttoepassingen, en in marketing voor klantbetrokkenheid\autocite{amazonRekognition}.
+
+\subsubsection{Microsoft Azure Computer Vision API}
+Microsoft Azure Computer Vision API biedt geavanceerde mogelijkheden voor beeldanalyse, waaronder objectherkenning, tekstextractie (OCR), en merkdetectie. Deze API maakt gebruik van deep learning-modellen om rijke informatie uit afbeeldingen te halen. Het wordt veel gebruikt in sectoren zoals detailhandel, gezondheidszorg en productie om processen te automatiseren en inzichten te verkrijgen\autocite{microsoftAzureVision}.
+
+\subsubsection{IBM Watson Visual Recognition}
+IBM Watson Visual Recognition API maakt gebruik van krachtige AI-modellen om inhoud in visuele gegevens te analyseren. Het kan objecten, gezichten en scènes identificeren en classificeren, en biedt uitgebreide mogelijkheden voor het trainen van aangepaste modellen. Dit maakt het geschikt voor een breed scala aan toepassingen, van productidentificatie tot beveiligingsbewaking\autocite{ibmVisualRecognition}.
+
+\subsubsection{Clarifai}
+Clarifai biedt een uitgebreide suite van beeld- en videoherkenningstechnologieën, aangedreven door AI. De API kan objecten, gezichten, kleuren en concepten in afbeeldingen identificeren. Clarifai is bekend om zijn gebruiksgemak en de mogelijkheid om aangepaste modellen te trainen en te implementeren, wat het ideaal maakt voor maatwerkoplossingen in verschillende industrieën\autocite{clarifai}.
+
+\subsubsection{DeepAI Image Recognition API}
+DeepAI Image Recognition API biedt krachtige en flexibele beeldherkenningstechnologieën die kunnen worden geïntegreerd in verschillende toepassingen. Het kan objecten, scènes en gezichten in afbeeldingen herkennen en biedt een eenvoudig te gebruiken REST API. DeepAI wordt vaak gebruikt in onderzoeksprojecten, kunstmatige intelligentietoepassingen en softwareontwikkeling\autocite{deepai}.
+
+\subsubsection{OpenCV AI Kit (OAK)}
+OpenCV AI Kit (OAK) is een open-source hardware- en softwareplatform voor AI-gestuurde beeldverwerking en computer vision. OAK ondersteunt real-time objectdetectie, tracking en dieptewaarneming. Het is bijzonder nuttig voor embedded systemen en IoT-toepassingen waar rekenkracht en nauwkeurigheid van cruciaal belang zijn\autocite{opencv}.
+
+\subsubsection{Alibaba Cloud Vision API}
+Alibaba Cloud Vision API biedt uitgebreide beeldanalysefuncties, waaronder objectherkenning, gezichtsherkenning, en tekstanalyse. Deze API wordt ondersteund door krachtige AI-modellen en wordt gebruikt in diverse toepassingen, zoals e-commerce, beveiliging en smart cities. Alibaba Cloud Vision API is bekend om zijn schaalbaarheid en betrouwbaarheid\autocite{alibaba}.
+
+
 
 
 

@@ -19,6 +19,19 @@
 %% For source code highlighting, requires pygments to be installed
 %% Compile with the -shell-escape flag!
 \usepackage[section]{minted}
+\usepackage{listings}
+\lstset{
+    backgroundcolor=\color{lightgray},  % Set the background color for the snippet
+    basicstyle=\ttfamily\small,         % Set the basic style
+    breaklines=true,                    % Enable line breaking
+    captionpos=b,                       % Set the caption position to bottom
+    frame=single,                       
+    language=Java,                    % Set the programming language (optional)
+    showstringspaces=false,             % Do not show spaces in strings as special characters
+    keywordstyle=\color{blue},          % Set keyword style
+    stringstyle=\color{red}             % Set string style
+}
+
 %% If you compile with the make_thesis.{bat,sh} script, use the following
 %% import instead:
 %% \usepackage[section,outputdir=../output]{minted}
@@ -63,6 +76,7 @@
 %% Add global exceptions to the hyphenation here
 \hyphenation{back-slash}
 %% The bibliography (style and settings are  found in hogentthesis.cls)
+\usepackage{biblatex} 
 \addbibresource{bachproef.bib}            %% Bibliography file
 \addbibresource{../voorstel/voorstel.bib} %% Bibliography research proposal
 \defbibheading{bibempty}{}
@@ -134,6 +148,8 @@
 \input{inleiding}
 \input{standvanzaken}
 \input{methodologie}
+\input{PoC}
+\input{Onderzoek}
 
 % Voeg hier je eigen hoofdstukken toe die de ``corpus'' van je bachelorproef
 % vormen. De structuur en titels hangen af van je eigen onderzoek. Je kan bv.

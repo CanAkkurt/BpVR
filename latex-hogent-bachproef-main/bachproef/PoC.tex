@@ -15,7 +15,7 @@ Deze sectie beschrijft de implementatie van het systeem, waarbij wordt ingegaan 
 
 
 \section{Android Applicatie}
-De Android-applicatie is essentieel voor de interactie met eindgebruikers en is specifiek ontworpen om efficiënt gebruik te maken van de functionaliteiten die moderne smartphones bieden. Het ontwikkelingsproces omvatte verschillende belangrijke aspecten die hieronder in detail worden beschreven:
+De Android-applicatie \autocite{VisionAndroid} is essentieel voor de interactie met eindgebruikers en is specifiek ontworpen om efficiënt gebruik te maken van de functionaliteiten die moderne smartphones bieden. Het ontwikkelingsproces omvatte verschillende belangrijke aspecten die hieronder in detail worden beschreven:
 
 \begin{itemize}
     \item \textbf{Gebruikersinterface:} De interface is ontwikkeld met een focus op gebruikersvriendelijkheid. De gebruikersinterface maakt gebruik van een modern ontwerp dat responsive is over verschillende schermgroottes en -resoluties. Belangrijke UI-elementen omvatten een interactieve camera-interface, een galerijweergave van recente opnames, en een dynamisch informatiepaneel dat updates ontvangt van de backend.
@@ -25,6 +25,8 @@ De Android-applicatie is essentieel voor de interactie met eindgebruikers en is 
     \item \textbf{Netwerkcommunicatie:} Om de afbeeldingen te verzenden naar de backend voor verwerking, implementeert de applicatie robuuste netwerkcommunicatiemechanismen. Dit omvat het gebruik van Retrofit voor gestroomlijnde HTTP-verzoeken en responsverwerking. Secure Socket Layer (SSL) encryptie wordt gebruikt om de veiligheid van dataoverdracht te garanderen.
     
 \end{itemize}
+
+
 
 \subsection{User interface}
 
@@ -44,7 +46,7 @@ De Android-applicatie is essentieel voor de interactie met eindgebruikers en is 
 \end{figure}
 \pagebreak
 \section{Java Backend}
-De backend van het systeem is ontwikkeld in Java, gebruikmakend van het Spring Boot framework, dat efficiëntie en kracht biedt voor enterprise-level applicaties. Deze sectie beschrijft de ontwikkeling, functionaliteiten en belangrijkste technologieën die gebruikt zijn voor de Java-backend.
+De backend van het systeem is ontwikkeld in Java, gebruikmakend van het Spring Boot framework, dat efficiëntie en kracht biedt voor enterprise-level applicaties. Deze sectie beschrijft de ontwikkeling, functionaliteiten en belangrijkste technologieën die gebruikt zijn voor de Java-backend \autocite{VisionBackEnd}.
 
 \begin{itemize}
     \item \textbf{API-ontwerp:} De backend fungeert als de centrale hub voor gegevensverwerking en is verantwoordelijk voor het ontvangen van afbeeldingen van de Android-applicatie, het communiceren met de Vision API en ChatGPT, en het opslaan van gegevens in de SQL-database. RESTful API's zijn geïmplementeerd met Spring Web, wat een gestandaardiseerde manier biedt voor het creëren van eindpunten en het behandelen van clientverzoeken.
@@ -56,6 +58,7 @@ De backend van het systeem is ontwikkeld in Java, gebruikmakend van het Spring B
     \item \textbf{Databeheer:} Spring Data JPA wordt gebruikt voor het beheren van databasetransacties en het orkestreren van het data flow proces naar de SQL-database. Het maakt een efficiënte interactie met de database mogelijk via een abstractielaag die automatisch SQL-queries genereert uit repository methoden.
     
 \end{itemize}
+
 
 \pagebreak
 
